@@ -59,11 +59,17 @@
             label: '电压  ',
             value: 2
           },{
-            label: '电度  ',
+            label: '用电量  ',
             value: 3
           },{
             label: '漏电流',
             value: 4
+          },{
+            label: '有功功率',
+            value: 5
+          },{
+            label: '功率因素',
+            value: 6
           }
         ],
         ownerFreeData: [],
@@ -127,7 +133,7 @@
         let lineCharts = this.$refs.lineCharts;
         if(this.itemStatus == 0){
           title = '温度';
-          lineCharts.getChart().yAxis[0].setTitle({text:'摄氏度(℃)'});
+          lineCharts.getChart().yAxis[0].setTitle({text:'温度(摄氏度)'});
           this.itemType="temperatureA";
           this.getDayTime(lineCharts,'温度A');
           this.itemType="temperatureB";
@@ -139,7 +145,7 @@
 
         }else if(this.itemStatus == 1){
           title = '电流';
-          lineCharts.getChart().yAxis[0].setTitle({text:'安培(A)'});
+          lineCharts.getChart().yAxis[0].setTitle({text:'电流(安培)'});
           this.itemType="currentA";
           this.getDayTime(lineCharts,'电流A');
           this.itemType="currentB";
@@ -149,7 +155,7 @@
         }else if(this.itemStatus == 2){
           title = '电压';
 
-          lineCharts.getChart().yAxis[0].setTitle({text:'电压(V)'});
+          lineCharts.getChart().yAxis[0].setTitle({text:'电压(伏特)'});
           this.itemType="voltageA";
           this.getDayTime(lineCharts,'电压A');
           this.itemType="voltageB";
@@ -158,13 +164,13 @@
           this.getDayTime(lineCharts,'电压C');
         }else if(this.itemStatus == 3){
           title = '用电量';
-          lineCharts.getChart().yAxis[0].setTitle({text:'度数(kWh)'});
+          lineCharts.getChart().yAxis[0].setTitle({text:'用电量(度)'});
           this.itemType="electricalDegree";
-          this.getDayTime(lineCharts,'电度');
+          this.getDayTime(lineCharts,'用电量');
         }else if(this.itemStatus == 4){
           this.showlist=[];
           title = '漏电流';
-          lineCharts.getChart().yAxis[0].setTitle({text:'安培(A)'});
+          lineCharts.getChart().yAxis[0].setTitle({text:'漏电流(毫安培)'});
           this.itemType="leakageElectricity";
           this.getDayTime(lineCharts,'漏电流');
         }else if(this.itemStatus == 5){
@@ -199,7 +205,8 @@
 
 
        //   lineCharts.getChart().title.update({ text: title });
-          lineCharts.getChart().yAxis[0].setTitle({text:'摄氏度(℃)'});
+          lineCharts.getChart().yAxis[0].setTitle({text:'温度(摄氏度)'});
+          lineCharts.getChart().xAxis[0].setTitle({text:'时间'});
         //  lineCharts.addSeries({name: this.sbbName,data: [['2017-01',12],['2017-02',12],['2017-03',32],['2017-04',12]]});
         }
         this.getDayTime(lineCharts,'温度A');

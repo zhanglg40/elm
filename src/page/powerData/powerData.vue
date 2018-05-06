@@ -18,7 +18,7 @@
              {{item.sbbName}}
            </h3>
          <p class="food_description_sale_rating">
-           <span >电度 ：{{item.electricalDegree}}</span>
+           <span >用电量 ：{{item.electricalDegree}}</span>
 
            <span>漏电 ：{{item.leakageElectricity}}</span>
            <span> </span>
@@ -39,12 +39,13 @@
            <span> {{item.createDate}}</span>
            </p>-->
            <table class="list_description_head"><tr><!--<td colspan="2">设备名称：</td>--><td colspan="2" class="td_right">{{ item.sbbName }}</td>
-           </tr><tr><td class="td_right">电度：</td><td>{{ item.electricalDegree }}</td><td class="td_right">漏电流：</td><td>{{ item.leakageElectricity }}</td></tr>
+           </tr><tr><td class="td_right">用电量：</td><td>{{ item.electricalDegree }}</td><td class="td_right">漏电流：</td><td>{{ item.leakageElectricity }}</td></tr>
              <tr><td class="td_right">温度A：</td><td>{{item.temperatureA}}</td><td class="td_right">温度B：</td><td>{{item.temperatureB}}</td></tr>
              <tr><td class="td_right">温度C：</td><td>{{item.temperatureC}}</td><td class="td_right">温度N：</td><td>{{item.temperatureN}}</td></tr>
              <tr><td class="td_right">电压A：</td><td>{{ item.voltageA }}</td><td class="td_right">电压B：</td><td>{{ item.voltageB }}</td></tr>
              <tr><td class="td_right">电压C：</td><td>{{ item.voltageC }}</td><td class="td_right">电流A：</td><td>{{ item.currentA }}</td></tr>
              <tr><td class="td_right">电流B：</td><td>{{ item.currentB }}</td><td class="td_right">电流C：</td><td>{{ item.currentC }}</td></tr>
+             <tr><td class="td_right">有功功率：</td><td>{{ item.activePower }}</td><td class="td_right">功率因数：</td><td>{{ item.powerFactor }}</td></tr>
              <tr><td class="td_right">时间&nbsp;  ：</td><td colspan="3">{{ item.createDate }}</td></tr>
            </table>
          </section>

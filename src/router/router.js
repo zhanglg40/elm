@@ -60,6 +60,11 @@ const srhDay = r => require.ensure([], () => r(require('../page/day/srhDay')), '
 const dayData = r => require.ensure([], () => r(require('../page/day/dayData')), 'dayData')
 const srhOH = r => require.ensure([], () => r(require('../page/otherData/srhOH')), 'srhOH')
 const srhYear = r => require.ensure([], () => r(require('../page/yearData/srhYear')), 'srhYear')
+const advice = r => require.ensure([], () => r(require('../page/advice/advice')), 'advice')
+const ldwh = r => require.ensure([], () => r(require('../page/advice/ldwh')), 'ldwh')
+const ldpc = r => require.ensure([], () => r(require('../page/advice/ldpc')), 'ldpc')
+const dlwh = r => require.ensure([], () => r(require('../page/advice/dlwh')), 'dlwh')
+const dlpc = r => require.ensure([], () => r(require('../page/advice/dlpc')), 'dlpc')
 export default [{
     path: '/',
     component: App, //顶层路由，对应index.html
@@ -175,6 +180,25 @@ export default [{
       {path: '/showLine', //电力数据
         component: showLine,
       }  ,
+      {
+        path: '/advice',
+        component:advice,
+      },
+      {
+        path: '/ldwh',
+        component:ldwh,
+      },
+      {
+        path: '/ldpc',
+        component:ldpc,
+      },
+      {
+        path: '/dlwh',
+        component:dlwh,
+      },{
+        path: '/dlpc',
+        component:dlpc,
+      },
       {path: '/yearData',
         component: yearData,
       }, {path: '/srhPD',

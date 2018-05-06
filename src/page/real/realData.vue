@@ -60,7 +60,7 @@
             label: '电压 ',
             value: 2
           },{
-            label: '电度  ',
+            label: '用电量  ',
             value: 3
           },{
             label: '漏电流',
@@ -170,10 +170,10 @@
           lineCharts.hideLoading();
         }else if(this.itemStatus == 3){
           this.showlist=[];
-          title = '电度';
+          title = '用电量';
           lineCharts.getChart().yAxis[0].setTitle({text:'用电量(度)'});
           this.itemType="electricalDegree";
-          this.getRealTime(lineCharts,'1','电度');
+          this.getRealTime(lineCharts,'1','用电量');
         }else if(this.itemStatus == 4){
           this.showlist=[];
           title = '漏电流';
@@ -198,7 +198,7 @@
       routerBack(){
         this.$router.go(-1);
 
-        clearInterval(this.setIntervalNum);
+        clearinterval(this.setintervalnum);
       },
       getList(){
         var title = '';

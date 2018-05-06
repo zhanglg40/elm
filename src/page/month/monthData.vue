@@ -165,10 +165,10 @@
           this.itemType="voltageC";
           this.getYearTime(lineCharts,'电压C');
         }else if(this.itemStatus == 3){
-          title = '电度';
+          title = '用电量';
           lineCharts.getChart().yAxis[0].setTitle({text:'用电量(度)'});
           this.itemType="electricalDegree";
-          this.getYearTime(lineCharts,'电度');
+          this.getYearTime(lineCharts,'用电量');
         }else if(this.itemStatus == 4){
           this.showlist=[];
           title = '漏电流';

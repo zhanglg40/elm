@@ -6,19 +6,13 @@
     <div id="app">
 
       <date-picker field="myDate"
-                   placeholder="起始月"
+                   placeholder="年份"
                    v-model="dateFrom"
-                   format="yyyy-mm"
+                   format="yyyy"
                    :backward="true"
                    :no-today="false"
                    :forward="false"></date-picker>
-      <date-picker field="myDateTo"
-                   placeholder="截至月"
-                   v-model="dateTo"
-                   format="yyyy-mm"
-                   :backward="true"
-                   :no-today="false"
-                   :forward="false"></date-picker>
+
     </div>
     <alert-tip v-if="showAlert" :showHide="showAlert" @closeTip="closeTip" :alertText="alertText"></alert-tip>
     <div class="sort_container1">
@@ -76,7 +70,7 @@
       },
       mounted () {
 
-        this.dateTo=getCurrentTime()
+        this.dateFrom=getCurrentTime()
       }
     }
   function getCurrentTime(){
@@ -87,7 +81,7 @@
     month++;
     var m=month< 10 ? "0" + month:month;
 
-    return year + '-' + m  ;
+    return year ;
   }
 </script>
 
